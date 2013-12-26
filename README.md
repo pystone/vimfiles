@@ -1,5 +1,5 @@
 Pystone's vim files
-	based on Qiao's vim files
+  based on Qiao's vim files
 ================
 
 ## Bundled Plugins ##
