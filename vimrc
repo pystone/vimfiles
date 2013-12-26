@@ -28,7 +28,15 @@ set background=dark
 " Color settings
 set t_Co=256
 color tir_black
-set cursorline
+
+" highlight current cursor line and column
+" use \c to switch on and off
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorcolumn cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " JQuery syntax support
 autocmd Syntax javascript set syntax=jquery
